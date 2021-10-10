@@ -188,7 +188,7 @@ h1 {
   .card-bottom {
     /* height: 60%; */
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 0;
     right: 0;
     bottom: 0;
@@ -200,7 +200,7 @@ h1 {
     justify-content: flex-start;
   }
   .card-bottom > ul > li {
-    margin: 12px 0;
+    margin: 10px 0;
   }
   .card {
     height: 100%;
