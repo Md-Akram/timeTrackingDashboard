@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Rubik', sans-serif;
+  color: white;
+}
+
+body {
+  background: #0d1322;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 40px;
+}
+
+.main-card {
+  border-radius: 15px;
+  width: 95%;
+  margin: 10px auto;
+  max-width: 375px;
+}
+
+.card-top {
+  display: grid;
+  grid-template-areas:
+    'img p p'
+    'img h1 h1';
+  background: #5746ea;
+  padding: 20px;
+  border-radius: 15px;
+}
+.card-top > img {
+  grid-area: img;
+  width: 70px;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.card-top > p {
+  grid-area: p;
+  color: hsl(236, 100%, 87%);
+}
+.card-top > h1 {
+  grid-area: h1;
+  font-weight: 300;
+}
+
+.card-bottom {
+  border-radius: 15px;
+  background: #1d204b;
+  padding: 20px;
+  padding-top: 70px;
+  margin-top: -40px;
+  z-index: -1;
+  position: relative;
+  /* position: absolute;
+  left: 0;
+  right: 0; */
+}
+.card-bottom > ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-bottom > ul > li {
+  font-size: 18px;
+  color: hsl(236, 100%, 87%);
+}
+.card-bottom > ul > li:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.card {
+  border-radius: 15px;
+  width: 95%;
+  margin: 10px auto;
+  max-width: 375px;
+}
+.top-card {
+  height: 60px;
+  border-radius: 15px;
+  background-repeat: no-repeat;
+  background-position-y: -10px;
+  background-position-x: 90%;
+}
+.bottom-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1d204b;
+  border-radius: 15px;
+  padding: 20px;
+  margin-top: -20px;
+}
+.top-of-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+.bottom-of-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 374px) {
+  .bottom-of-bottom {
+    flex-direction: column;
+  }
+}
+h1 {
+  font-weight: 300;
+}
+
+.card-1 > .top-card {
+  background-color: #ff8b64;
+  background-image: url(images/icon-work.svg);
+}
+.card-2 > .top-card {
+  background-color: #56c2e6;
+  background-image: url(images/icon-play.svg);
+}
+.card-3 > .top-card {
+  background-color: #ff5e7d;
+  background-image: url(images/icon-study.svg);
+}
+.card-4 > .top-card {
+  background-color: #4bcf83;
+  background-image: url(images/icon-exercise.svg);
+}
+.card-5 > .top-card {
+  background-color: #7235d1;
+  background-image: url(images/icon-social.svg);
+}
+.card-6 > .top-card {
+  background-color: #f1c75b;
+  background-image: url(images/icon-self-care.svg);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 999px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 15px;
+    grid-template-areas:
+      'jeremy work play study'
+      'jeremy exercise social self';
+    align-items: stretch;
+  }
+  .main-card {
+    grid-area: jeremy;
+    height: 100%;
+    /* margin: 0; */
+    align-self: stretch;
+    position: relative;
+  }
+  .card-top {
+    display: grid;
+    grid-template-areas:
+      'img '
+      'p'
+      'h1';
+    /* height: 50%; */
+  }
+  .card-top * {
+    margin: 10px 0;
+  }
+  .card-bottom {
+    /* height: 60%; */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .card-bottom > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .card-bottom > ul > li {
+    margin: 12px 0;
+  }
+  .card {
+    height: 100%;
+    margin: 0;
+  }
+  .bottom-card {
+    /* height: 80%; */
+  }
+  .card-1 {
+    grid-area: work;
+  }
+  .card-2 {
+    grid-area: play;
+  }
+  .card-3 {
+    grid-area: study;
+  }
+  .card-4 {
+    grid-area: exercise;
+  }
+  .card-5 {
+    grid-area: social;
+  }
+  .card-6 {
+    grid-area: self;
+  }
+
+  .bottom-of-bottom {
+    flex-direction: column;
+  }
+  .bottom-of-bottom * {
+    margin: 10px 0;
+  }
+}
