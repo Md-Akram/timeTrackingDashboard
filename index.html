@@ -17,18 +17,24 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container" id="container">
       <div class="main-card card">
         <div class="card-top">
-          <img src="images/image-jeremy.png" alt="Jeremy" />
+          <img id="jeremy" src="images/image-jeremy.png" alt="Jeremy" />
           <p>Report for</p>
           <h1>Jeremy Robson</h1>
         </div>
         <div class="card-bottom">
           <ul>
-            <li>Daily</li>
-            <li>Weekly</li>
-            <li>Monthly</li>
+            <li onclick="dailyElClicked()" id="daily-el">Daily</li>
+            <li onclick="weeklyElClicked()" id="weekly-el">Weekly</li>
+            <li
+              onclick="
+            monthlyElClicked()"
+              id="monthly-el"
+            >
+              Monthly
+            </li>
           </ul>
         </div>
       </div>
@@ -123,5 +129,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="github.com/md-akram">AKRAM</a>.
     </div>
+
+    <script defer src="index.js"></script>
   </body>
 </html>
